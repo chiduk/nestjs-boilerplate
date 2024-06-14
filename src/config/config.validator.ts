@@ -1,7 +1,7 @@
 import { ConfigModuleOptions } from '@nestjs/config';
 import * as Joi from 'joi';
 import * as process from 'process';
-
+import 'dotenv-flow/config';
 export enum NODE_ENV {
   PRODUCTION = 'production',
   DEVELOPMENT = 'development',
@@ -9,9 +9,9 @@ export enum NODE_ENV {
 }
 
 export const ENV_FILE = {
-  production: '.env.production',
-  test: '.env.test',
-  development: '.env.development',
+  production: '.env.production.local',
+  test: '.env.test.local',
+  development: '.env.development.local',
 };
 
 export const configValidator: ConfigModuleOptions = {
